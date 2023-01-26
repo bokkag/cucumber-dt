@@ -1,0 +1,92 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "part-c-scenario;correct-non-zero-number-of-books-found-by-author",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Correct non-zero number of books found by author",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "title",
+                      "author"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "The Devil in the White city",
+                      "Eric Larson"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "The Lion, the Witch and the Wardrobe",
+                      "C.S.Lewis"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "In the Garden of the Beasts",
+                      "Eric Larson"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I have the following books in the store",
+            "match": {
+              "location": "features\\support\\stepdefinition\\booksteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 473600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I search for  books by author Eric Larson",
+            "match": {
+              "location": "features\\support\\stepdefinition\\booksteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3268999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I find 2 books",
+            "match": {
+              "location": "features\\support\\stepdefinition\\booksteps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 859899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "part-c-scenario",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Part C scenario",
+    "tags": [],
+    "uri": "features\\books.feature"
+  }
+]
