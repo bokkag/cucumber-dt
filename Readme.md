@@ -6,5 +6,5 @@
 4) Now as expected stage and commit all the feature files to the remote repository by `git add.` and `git commit -m 'message'`
 5) Now we need to change the master branch to main branch because in github the branch will be named as <main> and to do that run the command `git branch -M main`
 6) To add the repository run the command `git remote add origin https://github.com/bokkag/cucumber-dt.git`
-7) Now the last step to push all your feature files to remote repository is to run the command `git push -u origin main` ,and once you run the command you can see all your local feature files in the remote repository
+7) Now the last step to push all your feature files to remote repository is to run the command `git push -u origin main` ,and once you run the command you can see all your local feature files in  remote repository
 
