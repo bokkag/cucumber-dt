@@ -1,41 +1,47 @@
 pipeline {
     agent any
 
+    stages {
         stage('Install') {
             steps {
-                echo 'Install Dependencies'
-                if(isUnix()){
-                    bat 'npm install'
-                }else{
-                    sh 'npm install'
+                echo 'Install Depedencies'
+                script{
+                    if(isUnix()){
+                        sh 'npm install'
+                    }else{
+                        bat 'npm install'
+                    }
                 }
-                
             }
         }
         stage('Test') {
             steps {
-                echo 'ExecuteTest'
-                 if(isUnix()){
-                    bat 'npm test'
-                }else{
-                    sh 'npm test'
+                echo 'Execute tests'
+                script{
+                    if(isUnix()){
+                        sh 'npm test'
+                    }else{
+                        bat 'npm test'
+                    }
                 }
             }
         }
         stage('Report') {
             steps {
-                echo 'Generate Report'
-                 if(isUnix()){
-                    bat 'npm run report'
-                }else{
-                    sh 'npm run report'
+                echo 'Reports'
+                script{
+                    if(isUnix()){
+                        sh 'npm run report'
+                    }else{
+                        bat 'npm run report'
+                    }
                 }
             }
         }
-         stage('Publish Report') {
+        stage('Publish Report') {
             steps {
-                echo 'Publish Report'
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'cucumber_report.html', reportName: 'Cucumber Report', reportTitles: '', useWrapperFileDirectly: true])
+                echo 'Publish Reports'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'report', reportFiles: 'cucumber_report.html', reportName: 'Cucumber Report', reportTitles: ''])
             }
         }
     }
